@@ -1,0 +1,26 @@
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.pdb
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.baml
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.g.cs
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\App.g.cs
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1_MarkupCompile.cache
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.g.resources
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.Properties.Resources.resources
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.csproj.GenerateResource.Cache
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.exe
+c:\users\hexpang\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.pdb
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.exe
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.pdb
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.pdb
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.baml
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.g.cs
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\App.g.cs
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1_MarkupCompile.cache
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.g.resources
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.Properties.Resources.resources
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+G:\测试项目\Anthill\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1_MarkupCompile.lref

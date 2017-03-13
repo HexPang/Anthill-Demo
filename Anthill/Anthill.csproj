@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5ADAF5C4-168C-462C-ACF3-8A45AC5FCC5D}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anthill</RootNamespace>
+    <AssemblyName>Anthill</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>zh-Hans</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Anthill.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Anthill.App</SilverlightAppEntry>
+    <TestPageFileName>AnthillTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Management\ResourceManage.cs" />
+    <Compile Include="Math\GameMath.cs" />
+    <Compile Include="Object\AnthillBase.cs" />
+    <Compile Include="Object\Arrow.xaml.cs">
+      <DependentUpon>Arrow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Object\BaseObject.cs" />
+    <Compile Include="Object\BGM.cs" />
+    <Compile Include="Object\bugPanel.cs" />
+    <Compile Include="Object\Bullet.cs" />
+    <Compile Include="Object\Button_BuyBug.cs" />
+    <Compile Include="Object\DragFoodItem.cs" />
+    <Compile Include="Object\DynamicObject.cs" />
+    <Compile Include="Object\Effect.cs" />
+    <Compile Include="Object\FoodItem.cs" />
+    <Compile Include="Object\HUD.cs" />
+    <Compile Include="Object\Kernel.cs" />
+    <Compile Include="Object\MousePointer.cs" />
+    <Compile Include="Object\MovePathPoint.cs" />
+    <Compile Include="Object\PathLine.cs" />
+    <Compile Include="Object\PathObject.xaml.cs">
+      <DependentUpon>PathObject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Object\SFX.cs" />
+    <Compile Include="Object\StaticObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sprites\SpriteBase.cs" />
+    <Compile Include="Sprites\SpriteEvent.cs" />
+    <Compile Include="Sprites\SpriteState.cs" />
+    <Compile Include="WeiGame\WeiGame.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Loading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Object\Arrow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Object\PathObject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sprite_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\foods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\button_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\button_path_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\button_path_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\button_path_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ring_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ring_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ring_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ring_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\3\304.png" />
+    <Resource Include="Images\3\305.png" />
+    <Resource Include="Images\3\306.png" />
+    <Resource Include="Images\3\307.png" />
+    <Resource Include="Images\3\308.png" />
+    <Resource Include="Images\3\309.png" />
+    <Resource Include="Images\3\310.png" />
+    <Resource Include="Images\3\311.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\4\325.png" />
+    <Resource Include="Images\4\326.png" />
+    <Resource Include="Images\4\327.png" />
+    <Resource Include="Images\4\328.png" />
+    <Resource Include="Images\4\329.png" />
+    <Resource Include="Images\4\330.png" />
+    <Resource Include="Images\4\331.png" />
+    <Resource Include="Images\4\332.png" />
+    <Resource Include="Images\4\333.png" />
+    <Resource Include="Images\4\334.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\5\318.png" />
+    <Resource Include="Images\5\319.png" />
+    <Resource Include="Images\5\320.png" />
+    <Resource Include="Images\5\321.png" />
+    <Resource Include="Images\5\322.png" />
+    <Resource Include="Images\5\323.png" />
+    <Resource Include="Images\5\324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\6\221.png" />
+    <Resource Include="Images\6\222.png" />
+    <Resource Include="Images\6\223.png" />
+    <Resource Include="Images\6\224.png" />
+    <Resource Include="Images\6\225.png" />
+    <Resource Include="Images\6\226.png" />
+    <Resource Include="Images\6\227.png" />
+    <Resource Include="Images\6\228.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\7\335.png" />
+    <Resource Include="Images\7\336.png" />
+    <Resource Include="Images\7\337.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DemoMap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\8\229.png" />
+    <Resource Include="Images\8\230.png" />
+    <Resource Include="Images\8\231.png" />
+    <Resource Include="Images\8\232.png" />
+    <Resource Include="Images\8\233.png" />
+    <Resource Include="Images\8\234.png" />
+    <Resource Include="Images\8\235.png" />
+    <Resource Include="Images\8\236.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Foods\237.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\6\217.png" />
+    <Resource Include="Images\6\218.png" />
+    <Resource Include="Images\6\219.png" />
+    <Resource Include="Images\6\220.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\5\315.png" />
+    <Resource Include="Images\5\316.png" />
+    <Resource Include="Images\5\317.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bullet\313.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bullet\114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Foods\216.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bgm\boa_vista.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Effect\Bomb\1.png" />
+    <Resource Include="Images\Effect\Bomb\10.png" />
+    <Resource Include="Images\Effect\Bomb\100.png" />
+    <Resource Include="Images\Effect\Bomb\101.png" />
+    <Resource Include="Images\Effect\Bomb\11.png" />
+    <Resource Include="Images\Effect\Bomb\12.png" />
+    <Resource Include="Images\Effect\Bomb\13.png" />
+    <Resource Include="Images\Effect\Bomb\14.png" />
+    <Resource Include="Images\Effect\Bomb\15.png" />
+    <Resource Include="Images\Effect\Bomb\16.png" />
+    <Resource Include="Images\Effect\Bomb\17.png" />
+    <Resource Include="Images\Effect\Bomb\18.png" />
+    <Resource Include="Images\Effect\Bomb\19.png" />
+    <Resource Include="Images\Effect\Bomb\2.png" />
+    <Resource Include="Images\Effect\Bomb\20.png" />
+    <Resource Include="Images\Effect\Bomb\21.png" />
+    <Resource Include="Images\Effect\Bomb\22.png" />
+    <Resource Include="Images\Effect\Bomb\23.png" />
+    <Resource Include="Images\Effect\Bomb\24.png" />
+    <Resource Include="Images\Effect\Bomb\25.png" />
+    <Resource Include="Images\Effect\Bomb\26.png" />
+    <Resource Include="Images\Effect\Bomb\27.png" />
+    <Resource Include="Images\Effect\Bomb\28.png" />
+    <Resource Include="Images\Effect\Bomb\29.png" />
+    <Resource Include="Images\Effect\Bomb\3.png" />
+    <Resource Include="Images\Effect\Bomb\30.png" />
+    <Resource Include="Images\Effect\Bomb\31.png" />
+    <Resource Include="Images\Effect\Bomb\32.png" />
+    <Resource Include="Images\Effect\Bomb\33.png" />
+    <Resource Include="Images\Effect\Bomb\34.png" />
+    <Resource Include="Images\Effect\Bomb\35.png" />
+    <Resource Include="Images\Effect\Bomb\36.png" />
+    <Resource Include="Images\Effect\Bomb\37.png" />
+    <Resource Include="Images\Effect\Bomb\38.png" />
+    <Resource Include="Images\Effect\Bomb\39.png" />
+    <Resource Include="Images\Effect\Bomb\4.png" />
+    <Resource Include="Images\Effect\Bomb\40.png" />
+    <Resource Include="Images\Effect\Bomb\41.png" />
+    <Resource Include="Images\Effect\Bomb\42.png" />
+    <Resource Include="Images\Effect\Bomb\43.png" />
+    <Resource Include="Images\Effect\Bomb\44.png" />
+    <Resource Include="Images\Effect\Bomb\45.png" />
+    <Resource Include="Images\Effect\Bomb\46.png" />
+    <Resource Include="Images\Effect\Bomb\47.png" />
+    <Resource Include="Images\Effect\Bomb\48.png" />
+    <Resource Include="Images\Effect\Bomb\49.png" />
+    <Resource Include="Images\Effect\Bomb\5.png" />
+    <Resource Include="Images\Effect\Bomb\50.png" />
+    <Resource Include="Images\Effect\Bomb\51.png" />
+    <Resource Include="Images\Effect\Bomb\52.png" />
+    <Resource Include="Images\Effect\Bomb\53.png" />
+    <Resource Include="Images\Effect\Bomb\54.png" />
+    <Resource Include="Images\Effect\Bomb\55.png" />
+    <Resource Include="Images\Effect\Bomb\56.png" />
+    <Resource Include="Images\Effect\Bomb\57.png" />
+    <Resource Include="Images\Effect\Bomb\58.png" />
+    <Resource Include="Images\Effect\Bomb\59.png" />
+    <Resource Include="Images\Effect\Bomb\6.png" />
+    <Resource Include="Images\Effect\Bomb\60.png" />
+    <Resource Include="Images\Effect\Bomb\61.png" />
+    <Resource Include="Images\Effect\Bomb\62.png" />
+    <Resource Include="Images\Effect\Bomb\63.png" />
+    <Resource Include="Images\Effect\Bomb\64.png" />
+    <Resource Include="Images\Effect\Bomb\65.png" />
+    <Resource Include="Images\Effect\Bomb\66.png" />
+    <Resource Include="Images\Effect\Bomb\67.png" />
+    <Resource Include="Images\Effect\Bomb\68.png" />
+    <Resource Include="Images\Effect\Bomb\69.png" />
+    <Resource Include="Images\Effect\Bomb\7.png" />
+    <Resource Include="Images\Effect\Bomb\70.png" />
+    <Resource Include="Images\Effect\Bomb\71.png" />
+    <Resource Include="Images\Effect\Bomb\72.png" />
+    <Resource Include="Images\Effect\Bomb\73.png" />
+    <Resource Include="Images\Effect\Bomb\74.png" />
+    <Resource Include="Images\Effect\Bomb\75.png" />
+    <Resource Include="Images\Effect\Bomb\76.png" />
+    <Resource Include="Images\Effect\Bomb\77.png" />
+    <Resource Include="Images\Effect\Bomb\78.png" />
+    <Resource Include="Images\Effect\Bomb\79.png" />
+    <Resource Include="Images\Effect\Bomb\8.png" />
+    <Resource Include="Images\Effect\Bomb\80.png" />
+    <Resource Include="Images\Effect\Bomb\81.png" />
+    <Resource Include="Images\Effect\Bomb\82.png" />
+    <Resource Include="Images\Effect\Bomb\83.png" />
+    <Resource Include="Images\Effect\Bomb\84.png" />
+    <Resource Include="Images\Effect\Bomb\85.png" />
+    <Resource Include="Images\Effect\Bomb\86.png" />
+    <Resource Include="Images\Effect\Bomb\87.png" />
+    <Resource Include="Images\Effect\Bomb\88.png" />
+    <Resource Include="Images\Effect\Bomb\89.png" />
+    <Resource Include="Images\Effect\Bomb\9.png" />
+    <Resource Include="Images\Effect\Bomb\90.png" />
+    <Resource Include="Images\Effect\Bomb\91.png" />
+    <Resource Include="Images\Effect\Bomb\92.png" />
+    <Resource Include="Images\Effect\Bomb\93.png" />
+    <Resource Include="Images\Effect\Bomb\94.png" />
+    <Resource Include="Images\Effect\Bomb\95.png" />
+    <Resource Include="Images\Effect\Bomb\96.png" />
+    <Resource Include="Images\Effect\Bomb\97.png" />
+    <Resource Include="Images\Effect\Bomb\98.png" />
+    <Resource Include="Images\Effect\Bomb\99.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\button\1.png" />
+    <Resource Include="Images\button\2.png" />
+    <Resource Include="Images\button\3.png" />
+    <Resource Include="Images\button\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sfx\bomb1.mp3" />
+    <Resource Include="Resources\sfx\collect_resource.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sfx\death5.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sfx\pilotant_loop2.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sfx\spitter_impact.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bgm\ambience1.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\path\1.png" />
+    <Resource Include="Images\path\5.png" />
+    <Resource Include="Images\path\4.png" />
+    <Resource Include="Images\path\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sfx\text_blip.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sfx\menu_error.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Foods\229.png" />
+    <Resource Include="Images\Failed.png" />
+    <Resource Include="Images\Start.png" />
+    <Resource Include="Images\Won.png" />
+    <Resource Include="Images\144.png" />
+    <Resource Include="Images\Foods\1.png" />
+    <Resource Include="Images\9\10.png" />
+    <Resource Include="Images\9\11.png" />
+    <Resource Include="Images\9\12.png" />
+    <Resource Include="Images\9\13.png" />
+    <Resource Include="Images\9\14.png" />
+    <Resource Include="Images\9\2.png" />
+    <Resource Include="Images\9\3.png" />
+    <Resource Include="Images\9\4.png" />
+    <Resource Include="Images\9\5.png" />
+    <Resource Include="Images\9\6.png" />
+    <Resource Include="Images\9\7.png" />
+    <Resource Include="Images\9\8.png" />
+    <Resource Include="Images\9\9.png" />
+    <Resource Include="Images\Foods\42.png" />
+    <Resource Include="Images\10\43.png" />
+    <Resource Include="Images\10\44.png" />
+    <Resource Include="Images\10\45.png" />
+    <Resource Include="Images\10\46.png" />
+    <Resource Include="Images\10\47.png" />
+    <Resource Include="Images\10\48.png" />
+    <Resource Include="Images\10\49.png" />
+    <Resource Include="Images\10\50.png" />
+    <Resource Include="Images\10\51.png" />
+    <Resource Include="Images\10\52.png" />
+    <Resource Include="Images\10\53.png" />
+    <Resource Include="Images\10\54.png" />
+    <Resource Include="Images\10\55.png" />
+    <Resource Include="Images\base\157.png" />
+    <Resource Include="Images\base\156.png" />
+    <Content Include="Images\Foods\216\info.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,30 @@
+void MainWindow_MouseMove(object sender, MouseEventArgs e)
+        {
+            move++;
+            if (move == 10) { 
+                move = 1;
+                Point p = e.GetPosition(Layroot);
+                if (lastPoint.X != 0 && lastPoint.Y != 0)
+                {
+                    double range = GetDistance(p, lastPoint);
+                    if (range >= 20)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        lastPoint = p;
+                    }
+                }
+                else
+                {
+                    lastPoint = p;
+                }
+                Image point = new Image() { Width = 4, Height = 4, Source = new BitmapImage(new Uri(@"path_dot_spitter[4444]_low.png",UriKind.Relative)) };
+                Layroot.Children.Add(point);
+                Canvas.SetLeft(point, p.X - 2);
+                Canvas.SetTop(point, p.Y - 2);
+            }
+            this.Title = move.ToString();
+            //throw new NotImplementedException();
+        }

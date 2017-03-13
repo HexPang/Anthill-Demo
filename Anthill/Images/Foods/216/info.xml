@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Food
+ Total="10"
+ Pick="0"
+ FoodSkin="1.png"
+ CanDrag="true"
+ MaxAnthill="1"
+ DragSkin="null"
+ Weight="5"
+ Width="85"
+ Height="79"
+/>
